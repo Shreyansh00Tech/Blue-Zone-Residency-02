@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BZR Homes — Luxury Residences · Sector 49, Noida</title>
+  <meta name="description" content="BZR Homes offers premium ready-to-move 2BHK & 3BHK residences in Sector 49, Noida. Italian marble, terrace gardens, lift access & basement parking." />
+  <meta property="og:title" content="BZR Homes — Luxury Residences, Sector 49 Noida" />
+  <meta property="og:description" content="Ready-to-move 2BHK & 3BHK. Italian marble, terrace gardens, lift, parking. Starting ₹65L." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="premium-preloader" style="position: fixed; inset: 0; z-index: 100000; background: #0a0a0a; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.6s;">
+    <div style="position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+      <div style="width: 80px; height: 80px; border: 2px solid rgba(219, 169, 74, 0.1); border-top: 2px solid #dba94a; transform: rotate(45deg); animation: spinDiamond 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite; border-radius: 4px;"></div>
+      <div style="position: absolute; font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #dba94a; font-weight: 600; letter-spacing: 1px;">B</div>
+    </div>
+    <div style="width: 140px; height: 1px; background: rgba(255,255,255,0.05); position: relative; overflow: hidden; border-radius: 10px; margin-bottom: 1rem;">
+      <div id="preloader-bar" style="position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: linear-gradient(90deg, #dba94a, #f3d18c); transition: width 0.3s ease;"></div>
+    </div>
+    <div style="font-family: 'Space Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; color: rgba(255,255,255,0.4);">Elevating Luxury</div>
+  </div>
+
+  <style>
+    @keyframes spinDiamond {
+      0% { transform: rotate(45deg); }
+      100% { transform: rotate(405deg); }
+    }
+  </style>
+
+  <script>
+    (function() {
+      document.body.style.overflow = 'hidden';
+      let progress = 0;
+      const bar = document.getElementById('preloader-bar');
+      const loader = document.getElementById('premium-preloader');
+      
+      const interval = setInterval(() => {
+        if (progress < 90) {
+          progress += Math.floor(Math.random() * 15) + 5;
+          if (progress > 90) progress = 90;
+          if (bar) bar.style.width = progress + '%';
+        }
+      }, 60);
+
+      function hideLoader() {
+        clearInterval(interval);
+        if (bar) bar.style.width = '100%';
+        setTimeout(() => {
+          if (loader) {
+            loader.style.opacity = '0';
+            loader.style.visibility = 'hidden';
+          }
+          document.body.style.overflow = '';
+        }, 350);
+      }
+
+      // Hard Limit: Automatically open in 1.2 seconds max
+      setTimeout(hideLoader, 1200);
+      window.addEventListener('load', hideLoader);
+    })();
+  </script>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-diamond">
+          <span>B</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">BZR HOMES</span>
+          <span class="logo-sub">SECTOR 49 · NOIDA</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#residences" class="nav-link">Residences</a>
+        <a href="#amenities" class="nav-link">Amenities</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#location" class="nav-link">Location</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:9650404888" class="btn-call">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          96504 04888
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home" style="position: relative; overflow: hidden;">
+    <div class="hero-bg" style="position: absolute; inset: 0; z-index: -1; overflow: hidden; background-color: #0d0d0d;">
+      <img src="images/hero-building.jpeg" alt="BZR Homes Exterior" class="hero-img" id="heroImg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.35; display: block;" />
+      <div class="hero-overlay" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.95) 100%);"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-pill reveal">
+        <span class="pill-dot"></span>
+        Ready To Move
+      </div>
+
+      <h1 class="hero-heading reveal reveal-delay-1">
+        Where Every<br />
+        <em class="gold-em">Detail</em> Speaks<br />
+        Luxury.
+      </h1>
+
+      <p class="hero-sub reveal reveal-delay-2">
+        An intimate collection of just 8 residences — Italian marble underfoot,<br class="hide-mobile" />
+        false-ceiling drama overhead, terrace gardens that breathe alongside you.
+      </p>
+
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="#contact" class="btn-primary">
+          Schedule a Visit
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/919650404888" target="_blank" rel="noopener" class="btn-ghost">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.847L.057 23.804a.75.75 0 00.92.92l5.957-1.47A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.502-5.4-1.38l-.387-.22-4.01.99.99-3.87-.24-.4A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>✦ Trusted Builder</span>
+      <span>✦ Prime Sector 49</span>
+      <span>✦ Easy Delhi Access</span>
+      <span>✦ Premium Construction</span>
+      <span>✦ Ready To Move</span>
+      <span>✦ RERA Inspired Standards</span>
+      <span>✦ Italian Marble Flooring</span>
+      <span>✦ Terrace Garden</span>
+      <span>✦ Lift Access</span>
+      <span>✦ Basement Parking</span>
+      <span>✦ Trusted Builder</span>
+      <span>✦ Prime Sector 49</span>
+      <span>✦ Easy Delhi Access</span>
+      <span>✦ Premium Construction</span>
+      <span>✦ Ready To Move</span>
+      <span>✦ RERA Inspired Standards</span>
+      <span>✦ Italian Marble Flooring</span>
+      <span>✦ Terrace Garden</span>
+      <span>✦ Lift Access</span>
+      <span>✦ Basement Parking</span>
+    </div>
+  </div>
+
+  <section class="status-section">
+    <div class="container">
+      <div class="section-eyebrow reveal">Project Status</div>
+      <h2 class="section-heading reveal">
+        Design our premium<br /><em class="gold-em">boutique collection.</em>
+      </h2>
+      <div class="status-grid">
+        <div class="status-card reveal">
+          <div class="status-icon-wrap">⌂</div>
+          <div class="status-num">8</div>
+          <div class="status-lbl">Total Residences</div>
+        </div>
+        <div class="status-card reveal">
+          <div class="status-icon-wrap">✓</div>
+          <div class="status-num">2</div>
+          <div class="status-lbl">Already Sold</div>
+        </div>
+        <div class="status-card reveal">
+          <div class="status-icon-wrap">⚿</div>
+          <div class="status-num">4</div>
+          <div class="status-lbl">Ready To Move</div>
+        </div>
+        <div class="status-card status-card--gold reveal">
+          <div class="status-icon-wrap">✦</div>
+          <div class="status-num">8</div>
+          <div class="status-lbl">Available Now</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-eyebrow reveal">About BZR Homes</div>
+          <h2 class="section-heading reveal">
+            Crafted by<br />
+            <em class="gold-em">Perfect Engineers</em><br />
+            for families who<br />
+            value the finer life.
+          </h2>
+          <p class="body-text reveal">
+            BZR Homes is an intimate residential address in the heart of Sector 49, Noida — designed for those who appreciate Italian marble underfoot, false-ceiling light play overhead, and a private terrace garden.
+          </p>
+          <p class="body-text reveal">
+            Every residence carries the same exacting standards you'd expect from flagship projects — priced for the discerning few who got here first.
+          </p>
+          <div class="trust-list reveal">
+            <div class="trust-item">
+              <span class="trust-check">✦</span>
+              <div>
+                <strong>Trusted Builder</strong>
+                <small>Reputation built one handshake at a time.</small>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-check">✦</span>
+              <div>
+                <strong>Premium Construction</strong>
+                <small>No shortcuts. No compromises.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right reveal">
+          <div class="about-img-grid">
+            <div class="about-img-main">
+              <img src="images/interior-1.jpg" alt="Italian Marble Flooring" loading="lazy" />
+              <span class="img-badge">Italian Marble Flooring</span>
+            </div>
+            <div class="about-img-stack">
+              <div class="about-img-sm">
+                <img src="images/interior-2.jpg" alt="False Ceiling" loading="lazy" />
+                <span class="img-badge">False Ceiling Drama</span>
+              </div>
+              <div class="about-img-sm">
+                <img src="images/interior-3.jpg" alt="Premium Wardrobe" loading="lazy" />
+                <span class="img-badge">Premium Storage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="residences-section" id="residences">
+    <div class="container">
+      <div class="section-eyebrow centered reveal">Residences</div>
+      <h2 class="section-heading centered reveal">
+        Choose your <em class="gold-em">forever address.</em>
+      </h2>
+      <p class="section-sub centered reveal">Two thoughtfully engineered configurations. Both ready to move.</p>
+
+      <div class="residence-grid">
+
+        <div class="res-card reveal">
+          <div class="res-badge">Best Value</div>
+          <div class="res-img-wrap">
+            <img src="images/2bhk.jpg" alt="2 BHK" loading="lazy" />
+          </div>
+          <div class="res-body">
+            <div class="res-meta">
+              <span class="res-type">2 BHK</span>
+              <span class="res-sqft">1169 SQ FT</span>
+            </div>
+            <div class="res-divline"></div>
+            <ul class="res-feat">
+              <li>Spacious Living & Dining</li>
+              <li>Premium Modular Kitchen</li>
+              <li>Luxury Bathroom Suite</li>
+              <li>Designer Wardrobes</li>
+              <li>UPVC Soundproof Windows</li>
+              <li>False Ceiling Lighting</li>
+            </ul>
+            <div class="res-price-row">
+              <div>
+                <span class="price-lbl">Starting from</span>
+                <span class="price-val">₹65 Lakhs</span>
+              </div>
+              <a href="#contact" class="btn-res">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="res-card res-card--featured reveal">
+          <div class="res-badge res-badge--gold">Signature Residence</div>
+          <div class="res-img-wrap">
+            <img src="images/3bhk.jpg" alt="3 BHK" loading="lazy" />
+          </div>
+          <div class="res-body">
+            <div class="res-meta">
+              <span class="res-type">3 BHK</span>
+              <span class="res-sqft">2250 SQ FT</span>
+            </div>
+            <div class="res-divline"></div>
+            <ul class="res-feat">
+              <li>Expansive Living & Family Room</li>
+              <li>Master Suite with Walk-in Wardrobe</li>
+              <li>False Ceiling with Mood Lighting</li>
+              <li>Private Terrace Garden</li>
+              <li>Steam Bath</li>
+              <li>Modular Kitchen with Pantry</li>
+            </ul>
+            <div class="res-price-row">
+              <div>
+                <span class="price-lbl">Starting from</span>
+                <span class="price-val">₹1.2 Crore</span>
+              </div>
+              <a href="#contact" class="btn-res btn-res--gold">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="amenities-section" id="amenities">
+    <div class="container">
+      <div class="amenities-hdr">
+        <div>
+          <div class="section-eyebrow reveal">Lifestyle</div>
+          <h2 class="section-heading reveal">
+            Amenities that<br /><em class="gold-em">earn their name.</em>
+          </h2>
+        </div>
+        <p class="amenities-desc reveal">
+          From steam baths to a sky-lit terrace garden — every feature exists because it should, not to fill a brochure.
+        </p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity reveal"><span>📍</span><span>Prime Location</span></div>
+        <div class="amenity reveal"><span>🛗</span><span>Lift Facility</span></div>
+        <div class="amenity reveal"><span>🚗</span><span>Basement Parking</span></div>
+        <div class="amenity reveal"><span>🌿</span><span>Terrace Garden</span></div>
+        <div class="amenity reveal"><span>♨️</span><span>Steam Bath</span></div>
+        <div class="amenity reveal"><span>🌧️</span><span>Rainwater Harvesting</span></div>
+        <div class="amenity reveal"><span>🚪</span><span>Designer Doors</span></div>
+        <div class="amenity reveal"><span>🗄️</span><span>Premium Wardrobes</span></div>
+        <div class="amenity reveal"><span>🛁</span><span>Luxury Bathrooms</span></div>
+        <div class="amenity reveal"><span>🪟</span><span>UPVC Windows</span></div>
+        <div class="amenity reveal"><span>🍳</span><span>Modular Kitchen</span></div>
+        <div class="amenity reveal"><span>💡</span><span>False Ceiling</span></div>
+        <div class="amenity reveal"><span>⚡</span><span>Power Backup</span></div>
+        <div class="amenity reveal"><span>💧</span><span>24/7 Water Supply</span></div>
+        <div class="amenity reveal"><span>🔐</span><span>Video Door Phone</span></div>
+        <div class="amenity reveal"><span>🪨</span><span>Italian Marble</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-eyebrow centered reveal">Gallery</div>
+      <h2 class="section-heading centered reveal">Step <em class="gold-em">inside.</em></h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item gallery-item--large">
+        <img src="images/gallery-facade.jpg" alt="Building Facade" loading="lazy" />
+        <div class="gallery-cap"><span>Elevation</span><strong>Iconic Façade</strong></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-terrace.jpg" alt="Terrace" loading="lazy" />
+        <div class="gallery-cap"><span>Terrace</span><strong>Sky Lounge Pergola</strong></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-wardrobe.jpg" alt="Wardrobe" loading="lazy" />
+        <div class="gallery-cap"><span>Wardrobes</span><strong>Premium Storage</strong></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-ceiling.jpg" alt="False Ceiling" loading="lazy" />
+        <div class="gallery-cap"><span>Interiors</span><strong>False Ceiling Drama</strong></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-kitchen.jpg" alt="Kitchen" loading="lazy" />
+        <div class="gallery-cap"><span>Kitchen</span><strong>Modular Perfection</strong></div>
+      </div>
+      <div class="gallery-item gallery-item--wide">
+        <img src="images/gallery-bathroom.jpg" alt="Bathroom" loading="lazy" />
+        <div class="gallery-cap"><span>Bathrooms</span><strong>Spa-Like Luxury</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location-section" id="location">
+    <div class="container">
+      <div class="section-eyebrow reveal">Location</div>
+      <h2 class="section-heading reveal">
+        A 12-minute commute to<br /><em class="gold-em">everything you love.</em>
+      </h2>
+
+      <div class="location-grid">
+        <div class="map-wrap reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.7559799744737!2d77.36801!3d28.52241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce8a7c5534567%3A0x2b3e7c5f4a5c8321!2sSector%2049%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1718186400000!5m2!1sen!2sin"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="BZR Homes Location">
+          </iframe>
+        </div>
+
+        <div class="location-info reveal">
+          <div class="addr-card">
+            <div class="addr-icon">📍</div>
+            <div>
+              <strong>BZR Homes, Sector 49</strong>
+              <p>Mahavir Enclave Street, Dadri Main Road<br />
+              Near Pillar No. 45, Baraula<br />
+              Sector 49, Noida – 201301</p>
+              <a href="https://maps.google.com/?q=Sector+49+Noida" target="_blank" rel="noopener" class="map-link">Get Directions →</a>
+            </div>
+          </div>
+
+          <div class="nearby-label">Nearby</div>
+          <div class="nearby-list">
+            <div class="nearby-item"><span>🛣️ Dadri Main Road</span><span>Adjacent</span></div>
+            <div class="nearby-item"><span>🚇 Sector 50 Metro</span><span>5 mins</span></div>
+            <div class="nearby-item"><span>🛍️ Logix City Centre</span><span>8 mins</span></div>
+            <div class="nearby-item"><span>🏥 Fortis Hospital</span><span>10 mins</span></div>
+            <div class="nearby-item"><span>🏫 DPS / Amity School</span><span>10 mins</span></div>
+            <div class="nearby-item"><span>🛣️ DND Flyway (Delhi)</span><span>20 mins</span></div>
+            <div class="nearby-item"><span>🛣️ Noida Expressway</span><span>6 mins</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-left reveal">
+          <div class="section-eyebrow">Schedule A Visit</div>
+          <h2 class="section-heading">
+            Experience<br />BZR Homes<br /><em class="gold-em">In Person.</em>
+          </h2>
+          <p class="body-text">
+            Discover premium ready-to-move residences in Sector 49 Noida featuring luxury interiors, designer finishes and modern amenities.
+          </p>
+
+          <div class="contact-cards">
+            <a href="tel:9650404888" class="contact-card">
+              <span>📞</span>
+              <div>
+                <small>Call Us Directly</small>
+                <strong>+91 96504 04888</strong>
+              </div>
+            </a>
+            <a href="https://wa.me/919650404888" target="_blank" rel="noopener" class="contact-card">
+              <span>💬</span>
+              <div>
+                <small>WhatsApp Instantly</small>
+                <strong>Chat with us now</strong>
+              </div>
+            </a>
+            <div class="contact-card">
+              <span>📍</span>
+              <div>
+                <small>Project Address</small>
+                <strong>Sector 49, Noida – 201301</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" action="http://localhost:3000/enquire" method="POST">
+            <h3 class="form-heading">Book Your Site Visit</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Full Name *</label>
+                <input type="text" id="fname" name="name" placeholder="Rajesh Sharma" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="fphone">Phone Number *</label>
+                <input type="tel" id="fphone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="rajesh@email.com" autocomplete="email" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="funit">Interested In</label>
+                <select id="funit" name="unit_type">
+                  <option value="">Select Configuration</option>
+                  <option value="2bhk">2 BHK (1169 sq ft)</option>
+                  <option value="3bhk">3 BHK (2250 sq ft)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="fdate">Preferred Visit Date</label>
+                <input type="date" id="fdate" name="visit_date" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fmsg">Message (Optional)</label>
+              <textarea id="fmsg" name="message" rows="3" placeholder="Anything specific you'd like us to keep ready?"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              Schedule My Site Visit →
+            </button>
+            <p class="form-note">🔒 Your details stay private. No spam, ever.</p>
+
+            <div class="form-success" id="formSuccess">
+              ✅ Thank you! We'll call you within 30 minutes to confirm your visit.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-diamond"><span>B</span></div>
+            <div class="logo-text">
+              <span class="logo-name">BZR HOMES</span>
+              <span class="logo-sub">SECTOR 49 · NOIDA</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            A boutique residential address by Perfect Engineers — built for families who refuse to compromise.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <p>Mahavir Enclave Street, Dadri Main Road<br />
+          Near Pillar No. 45, Baraula<br />
+          Sector 49, Noida – 201301</p>
+          <a href="https://maps.google.com/?q=Sector+49+Noida" target="_blank" rel="noopener" class="footer-link">Open in Maps →</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Line</h4>
+          <a href="tel:9650404888" class="footer-phone">+91 96504 04888</a>
+          <p>WhatsApp · Same number</p>
+          <small>Perfect Engineers · Partner</small>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 BZR Homes. All rights reserved.</span>
+        <span>Crafted for Sector 49, Noida</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-btns">
+    <a href="https://wa.me/919650404888" target="_blank" rel="noopener" class="fab fab--wa" title="WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.847L.057 23.804a.75.75 0 00.92.92l5.957-1.47A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.502-5.4-1.38l-.387-.22-4.01.99.99-3.87-.24-.4A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="tel:9650404888" class="fab fab--call" title="Call Now">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span>Call Now</span>
+    </a>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
